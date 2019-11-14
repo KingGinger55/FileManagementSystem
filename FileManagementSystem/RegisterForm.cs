@@ -103,6 +103,10 @@ namespace FileManagementSystem
             closeWindow = database.closeWindow;
         }
 
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -39,69 +39,77 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(679, 68);
+            this.searchButton.Location = new System.Drawing.Point(1018, 106);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.Size = new System.Drawing.Size(112, 36);
             this.searchButton.TabIndex = 0;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             // 
             // uploadButton
             // 
-            this.uploadButton.Location = new System.Drawing.Point(16, 65);
+            this.uploadButton.Location = new System.Drawing.Point(24, 102);
+            this.uploadButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uploadButton.Name = "uploadButton";
-            this.uploadButton.Size = new System.Drawing.Size(107, 23);
+            this.uploadButton.Size = new System.Drawing.Size(160, 36);
             this.uploadButton.TabIndex = 1;
             this.uploadButton.Text = "Upload Files";
             this.uploadButton.UseVisualStyleBackColor = true;
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(260, 112);
+            this.deleteButton.Location = new System.Drawing.Point(390, 175);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteButton.Size = new System.Drawing.Size(112, 36);
             this.deleteButton.TabIndex = 2;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
             // 
             // profileButton
             // 
-            this.profileButton.Location = new System.Drawing.Point(16, 415);
+            this.profileButton.Location = new System.Drawing.Point(24, 648);
+            this.profileButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.profileButton.Name = "profileButton";
-            this.profileButton.Size = new System.Drawing.Size(75, 23);
+            this.profileButton.Size = new System.Drawing.Size(112, 36);
             this.profileButton.TabIndex = 3;
             this.profileButton.Text = "Profile";
             this.profileButton.UseVisualStyleBackColor = true;
+            this.profileButton.Click += new System.EventHandler(this.ProfileButton_Click);
             // 
             // fileViewer
             // 
-            this.fileViewer.Location = new System.Drawing.Point(341, 112);
-            this.fileViewer.MinimumSize = new System.Drawing.Size(20, 20);
+            this.fileViewer.Location = new System.Drawing.Point(512, 175);
+            this.fileViewer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fileViewer.MinimumSize = new System.Drawing.Size(30, 31);
             this.fileViewer.Name = "fileViewer";
-            this.fileViewer.Size = new System.Drawing.Size(413, 316);
+            this.fileViewer.Size = new System.Drawing.Size(620, 494);
             this.fileViewer.TabIndex = 4;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(426, 69);
+            this.textBox1.Location = new System.Drawing.Point(639, 108);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 22);
+            this.textBox1.Size = new System.Drawing.Size(355, 31);
             this.textBox1.TabIndex = 5;
             // 
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
-            this.searchLabel.Location = new System.Drawing.Point(338, 71);
+            this.searchLabel.Location = new System.Drawing.Point(507, 111);
+            this.searchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(82, 17);
+            this.searchLabel.Size = new System.Drawing.Size(124, 25);
             this.searchLabel.TabIndex = 6;
             this.searchLabel.Text = "Search For:";
             // 
             // MainMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 703);
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.fileViewer);
@@ -109,8 +117,10 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.uploadButton);
             this.Controls.Add(this.searchButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainMenuForm";
             this.Text = "Main Menu";
+            this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

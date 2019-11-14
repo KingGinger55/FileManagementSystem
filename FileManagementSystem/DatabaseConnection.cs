@@ -143,6 +143,16 @@ public class DatabaseConnection
         return containsStaus;
     }
 
+    /*private int changePassword(String newPassword, String currentPassword, String userName)
+    {
+
+        string query1 = $"SELECT `userName` FROM `useraccount` WHERE `userName` = '{userName}'";
+
+        MySqlCommand commandDatabase = new MySqlCommand(query1, databaseConnection);
+        commandDatabase.CommandTimeout = 60;
+
+
+    }*/
 
 
     //Input query as a string, the message is a resulting message box with text. If an empty string is entered no message will show.  Returns 0 unless the query returns data, then it returns a 1;
