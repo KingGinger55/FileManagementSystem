@@ -249,7 +249,7 @@ public class DatabaseConnection
 
         return containsData;
     }
-
+    //
     ///This method is always called when a user is created.  It checks the database for user accounts, if there are none then the first user is automatically
     ///the super admin.  This makes a manage user option available in the main menu, so that individual accounts can be deleted from the database.  This will also 
     ///make all files navigible from the main menu, including other users files. Returns the number of users in the DB.
