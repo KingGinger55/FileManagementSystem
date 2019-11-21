@@ -159,12 +159,14 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(9, 112);
+            this.listView.MultiSelect = false;
             this.listView.Name = "listView";
             this.listView.ShowItemToolTips = true;
             this.listView.Size = new System.Drawing.Size(573, 922);
             this.listView.TabIndex = 10;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.List;
+            this.listView.ItemActivate += new System.EventHandler(this.listView_ItemActivate);
             // 
             // MainMenuForm
             // 
