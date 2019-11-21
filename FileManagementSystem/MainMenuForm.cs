@@ -38,7 +38,7 @@ namespace FileManagementSystem
             DirectoryInfo currentDir = new DirectoryInfo(fileViewer.Url.AbsolutePath);//Creates DirectoryInfo from the current fileViewer path
             FileInfo[] files = currentDir.GetFiles("*" + searchBar.Text + "*", SearchOption.AllDirectories);//creates an array of FileInfo objects by searching the currently directory and down for the text in the searchBar
             listView.Items.Clear();//Clears the previous items from the list, would be from the previous search
-            foreach(FileInfo file in files)//For each file info, add the diretory name to the list
+            foreach (FileInfo file in files)//For each file info, add the diretory name to the list
             {
                 listView.Items.Add(file.Name + ": " + file.FullName);
             }
@@ -107,7 +107,7 @@ namespace FileManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             String changeDir = fileDropDown.Text;
 
             if (changeDir == "Home Directory")
@@ -119,7 +119,7 @@ namespace FileManagementSystem
                 fileViewer.Url = new Uri($"C:/DSDB/{userAccount.userName}/{changeDir}");
             }
 
-            
+
 
 
         }
@@ -133,6 +133,13 @@ namespace FileManagementSystem
         {
 
         }
+
+        private void listView_ItemActivate(object sender, EventArgs e)
+        {
+            if (sender.GetType() == typeof(ListViewItem))
+            {
+                MessageBox.Show("A ListViewItem was double clicked!");
+            }
+        }
     }
-    
 }
