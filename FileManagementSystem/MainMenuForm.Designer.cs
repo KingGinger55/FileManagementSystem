@@ -185,6 +185,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainMenuForm";
             this.Text = "Main Menu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenuForm_FormClosed);
             this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
