@@ -57,6 +57,7 @@ namespace FileManagementSystem
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(321, 31);
             this.usernameTextBox.TabIndex = 0;
+            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // emailTextBox
             // 
@@ -70,7 +71,7 @@ namespace FileManagementSystem
             this.retypePassTextBox.Location = new System.Drawing.Point(293, 383);
             this.retypePassTextBox.Name = "retypePassTextBox";
             this.retypePassTextBox.Size = new System.Drawing.Size(321, 31);
-            this.retypePassTextBox.TabIndex = 3;
+            this.retypePassTextBox.TabIndex = 5;
             this.retypePassTextBox.TextChanged += new System.EventHandler(this.retypePassTextBox_TextChanged);
             // 
             // passwordTextBox
@@ -78,7 +79,7 @@ namespace FileManagementSystem
             this.passwordTextBox.Location = new System.Drawing.Point(293, 332);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(321, 31);
-            this.passwordTextBox.TabIndex = 2;
+            this.passwordTextBox.TabIndex = 4;
             this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // usernameLabel
@@ -127,7 +128,7 @@ namespace FileManagementSystem
             this.securityQuestionComboBox.Location = new System.Drawing.Point(293, 439);
             this.securityQuestionComboBox.Name = "securityQuestionComboBox";
             this.securityQuestionComboBox.Size = new System.Drawing.Size(321, 33);
-            this.securityQuestionComboBox.TabIndex = 8;
+            this.securityQuestionComboBox.TabIndex = 6;
             // 
             // securityQuestionLabel
             // 
@@ -162,7 +163,7 @@ namespace FileManagementSystem
             this.createAccountButton.Location = new System.Drawing.Point(351, 560);
             this.createAccountButton.Name = "createAccountButton";
             this.createAccountButton.Size = new System.Drawing.Size(183, 41);
-            this.createAccountButton.TabIndex = 13;
+            this.createAccountButton.TabIndex = 8;
             this.createAccountButton.Text = "Create Account";
             this.createAccountButton.UseVisualStyleBackColor = true;
             this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
@@ -201,27 +202,27 @@ namespace FileManagementSystem
             this.firstNameTextBox.Location = new System.Drawing.Point(293, 214);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(321, 31);
-            this.firstNameTextBox.TabIndex = 17;
+            this.firstNameTextBox.TabIndex = 2;
             // 
             // lastNameTextBox
             // 
             this.lastNameTextBox.Location = new System.Drawing.Point(293, 275);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(321, 31);
-            this.lastNameTextBox.TabIndex = 18;
+            this.lastNameTextBox.TabIndex = 3;
             // 
             // securityAnswerTextbox
             // 
             this.securityAnswerTextbox.Location = new System.Drawing.Point(293, 495);
             this.securityAnswerTextbox.Name = "securityAnswerTextbox";
             this.securityAnswerTextbox.Size = new System.Drawing.Size(321, 31);
-            this.securityAnswerTextbox.TabIndex = 19;
+            this.securityAnswerTextbox.TabIndex = 7;
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 642);
+            this.ClientSize = new System.Drawing.Size(860, 753);
             this.Controls.Add(this.securityAnswerTextbox);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.firstNameTextBox);
@@ -242,6 +243,7 @@ namespace FileManagementSystem
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.usernameTextBox);
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.userNameTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
@@ -40,23 +40,25 @@
             this.HelpLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // textBox1
+            // userNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(259, 189);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.MaxLength = 60;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 31);
-            this.textBox1.TabIndex = 0;
+            this.userNameTextBox.Location = new System.Drawing.Point(259, 189);
+            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.userNameTextBox.MaxLength = 60;
+            this.userNameTextBox.Name = "userNameTextBox";
+            this.userNameTextBox.Size = new System.Drawing.Size(318, 31);
+            this.userNameTextBox.TabIndex = 0;
+            this.userNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // passwordTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(259, 254);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.MaxLength = 24;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(318, 31);
-            this.textBox2.TabIndex = 1;
+            this.passwordTextBox.Location = new System.Drawing.Point(259, 254);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.passwordTextBox.MaxLength = 24;
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(318, 31);
+            this.passwordTextBox.TabIndex = 1;
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // UsernameLabel
             // 
@@ -147,6 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(786, 600);
             this.Controls.Add(this.HelpLabel);
             this.Controls.Add(this.ProgramTitleLabel);
@@ -156,14 +159,17 @@
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.userNameTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "DSDB - Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,8 +178,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox userNameTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button LoginButton;
