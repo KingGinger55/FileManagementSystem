@@ -18,28 +18,6 @@ namespace FileManagementSystem
         static void Main()
         {
 
-
-
-            //DatabaseConnection.initialSetup();
-            LoginForm login = new LoginForm();
-            login.ShowDialog();
-            String[] userData = login.PushData();
-
-            try
-            {
-                Application.Run(new MainMenuForm(userData));
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-
-
-
-
-
-
         }
     }
 

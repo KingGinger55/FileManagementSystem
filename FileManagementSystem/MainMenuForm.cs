@@ -139,6 +139,17 @@ namespace FileManagementSystem
         {
         
         }
+
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProfileButton_Click(object sender, EventArgs e)
+        {
+            var ProfileScreen = new ProfileForm();
+            ProfileScreen.Show();
+        }
     }
     
 }

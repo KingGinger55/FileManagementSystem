@@ -200,6 +200,16 @@ public class DatabaseConnection
        
     }
 
+    /*private int changePassword(String newPassword, String currentPassword, String userName)
+    {
+
+        string query1 = $"SELECT `userName` FROM `useraccount` WHERE `userName` = '{userName}'";
+
+        MySqlCommand commandDatabase = new MySqlCommand(query1, databaseConnection);
+        commandDatabase.CommandTimeout = 60;
+
+
+    }*/
 
 
 
