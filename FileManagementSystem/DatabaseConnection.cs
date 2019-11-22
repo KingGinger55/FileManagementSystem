@@ -287,7 +287,55 @@ public class DatabaseConnection
 
 
 
+    /// Checks the current password of the user against the database and 
+    /// if it matches with the appropriate user, the password is updated for that user
+    /// Returns true and prints message if successful and false if not
+    internal static bool UpdatePassword(String CurrentPword, String NewPword, String UserName)
+    {
 
+        bool changeSuccess = false;
+        string update = $"UPDATE `useraccount` SET `password` = AES_ENCRYPT('{NewPword}', 'encryptKey') WHERE `userName` = '{UserName}' AND `password` = AES_ENCRYPT('{CurrentPword}', 'encryptKey')";
+        string check = $"SELECT * FROM useraccount WHERE password = AES_ENCRYPT('{CurrentPword}', 'encryptKey') AND userName = '{UserName}'";
+
+        MySqlCommand commandDatabase = new MySqlCommand(check, databaseConnection);
+        commandDatabase.CommandTimeout = 60;
+
+        try
+        {
+            databaseConnection.Open();
+            MySqlDataReader myReader = commandDatabase.ExecuteReader();
+
+            if (myReader.HasRows)
+            {
+                while (myReader.Read())
+                {
+                    if (myReader.GetString(1) == UserName)
+                    {
+                        ExecuteQuery(update);
+                        MessageBox.Show(myReader.GetString(1) + "'s Account" + " Password changed!");
+                        changeSuccess = true;
+
+                    }
+                    else
+                    {
+                        databaseConnection.Close();
+                        changeSuccess = false;
+
+                    }
+
+                }
+
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            MessageBox.Show((String)e.Message);
+        }
+        databaseConnection.Close();
+
+        return changeSuccess;
+    }
 
 }
 
